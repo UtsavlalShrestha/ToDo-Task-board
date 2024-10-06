@@ -1,0 +1,45 @@
+<style>
+    .nav{
+        display: flex;
+        justify-content: space-between;
+        width: 95%;
+        margin: auto;
+    }
+    .btns1{
+        display: flex;
+        justify-content: space-between;
+    }
+    .logo {
+    width: 50px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
+    margin: 5px 0 0 10px;
+}
+</style>
+
+<div class="nav">
+    <a href="/">
+        <img src="/static/images/logo.png" class="logo">
+    </a>
+    
+    {% if user.is_authenticated %}
+    <div class="logout-b">
+      <a href="{% url 'logout' %}"
+        ><input type="submit" value="Logout" class="button0"
+      /></a>
+    </div>
+    {% else %}
+    <div class="btns1">
+        <div class="login-b">
+            <a href="{% url 'login' %}"
+              ><input type="submit" value="Login" class="button1"
+            /></a>
+          </div>
+          
+          <div class="signup-b">
+            <a href="{% url 'signup' %}"
+              ><input type="submit" value="Sign Up" class="button2"
+            /></a>
+          </div>
+    </div>
+    {% endif %}
+</div>

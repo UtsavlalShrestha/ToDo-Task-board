@@ -1,0 +1,11 @@
+.inp{
+    margin: 0;
+    padding: 0;
+}
+
+.cc{
+
+    display: grid;
+    grid-template-columns: 0.5fr 3fr;
+    height: 90vh;
+}

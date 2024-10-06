@@ -1,0 +1,28 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/deleted.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/side.css' %}">
+<body class="inp">
+    <h1>Welcome aboard!</h1>
+
+    <div class="cc">
+
+        {% include 'base/sidebar.html' %}
+
+        <div class="side2">
+            {% for task in tasks %}
+            <!-- {% if task.status == 'completed' %} -->
+                <div class="innerpart">
+                    <p><b>{{ task.title }}</b></p>
+                    <p>Description: {{ task.description }}</p>
+                    <p>Deadline: {{ task.deadline }}</p>
+                    <hr>
+                </div>
+
+            {% endif %}
+        {% endfor %}
+        </div>
+    </div>
+</body>
+{% endblock %}

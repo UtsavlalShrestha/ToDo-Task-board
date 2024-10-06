@@ -1,0 +1,30 @@
+.inp{
+    margin: 0;
+    padding: 0;
+}
+
+.cc{
+
+    display: grid;
+    grid-template-columns: 0.5fr 3fr;
+    height: 90vh;
+}
+.side2 {
+    display: grid;                        
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;                          
+    padding: 20px;                      
+}
+
+.innerpart {
+    border: 1px solid black;
+    padding: 15px;  
+    max-height: 150px;    
+    text-align: center;                     /* Set a maximum height for the boxes */
+                     
+
+}
+.below{
+    display: flex;
+    justify-content: space-around;
+}

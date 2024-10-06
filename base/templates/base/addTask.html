@@ -1,0 +1,64 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<style>
+.form-container {
+    max-width: 400px; 
+    margin: 50px auto; 
+    padding: 20px;
+    border: 1px solid #ccc; 
+    border-radius: 8px;
+
+}
+
+.form-group {
+    margin-bottom: 15px; 
+}
+
+.form-group label {
+    display: block; 
+    margin-bottom: 5px; 
+    font-weight: bold; 
+}
+
+.form-group input[type="text"],
+.form-group textarea, 
+.form-group select {
+    width: 100%; 
+    padding: 10px;
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+}
+.btn{
+    display: flex;
+    justify-content: center;
+}
+
+.btn-submit {
+    background-color: #28a745; 
+    width: 300px;
+    color: white; 
+    border: none;
+    padding: 10px; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    font-size: 16px; 
+}
+
+
+</style>
+<div class="form-container">
+    
+    <form method="POST" action="">
+        {% csrf_token %}
+        <div class="form-group">
+            {{ form.as_p }}
+        </div>
+        <br>
+        <div class="btn">
+            <input type="submit" value="Add" class="btn-submit">
+        </div>
+    </form>
+</div>
+{% endblock %}
